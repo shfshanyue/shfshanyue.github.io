@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>pdb调试与sublime快捷键设置 | shanyueshuifeng</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="python pdb调试以及sublime3快捷键设置pdb调试如果对gdb比较熟悉的话，pdb就很容易上手。以一个demo快速了解常用的调试命令。
+123456789def test(a):    while True:        if a &amp;gt; 10:            break        a += 1    return aif __name__ == &apos;__main__&apos;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pdb调试与sublime快捷键设置">
+<meta property="og:url" content="http://yoursite.com/2015/12/12/pdb调试与sublime快捷键设置/index.html">
+<meta property="og:site_name" content="shanyueshuifeng">
+<meta property="og:description" content="python pdb调试以及sublime3快捷键设置pdb调试如果对gdb比较熟悉的话，pdb就很容易上手。以一个demo快速了解常用的调试命令。
+123456789def test(a):    while True:        if a &amp;gt; 10:            break        a += 1    return aif __name__ == &apos;__main__&apos;">
+<meta property="og:updated_time" content="2015-12-12T14:07:24.011Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="pdb调试与sublime快捷键设置">
+<meta name="twitter:description" content="python pdb调试以及sublime3快捷键设置pdb调试如果对gdb比较熟悉的话，pdb就很容易上手。以一个demo快速了解常用的调试命令。
+123456789def test(a):    while True:        if a &amp;gt; 10:            break        a += 1    return aif __name__ == &apos;__main__&apos;">
+  
+    <link rel="alternative" href="/atom.xml" title="shanyueshuifeng" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="null" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">shanyue</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/python/" style="font-size: 20px;">python</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">shanyue</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="null" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">shanyue</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-pdb调试与sublime快捷键设置" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/12/pdb调试与sublime快捷键设置/" class="article-date">
+  	<time datetime="2015-12-12T14:03:15.000Z" itemprop="datePublished">2015-12-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      pdb调试与sublime快捷键设置
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="python_pdb_u8C03_u8BD5_u4EE5_u53CAsublime3_u5FEB_u6377_u952E_u8BBE_u7F6E"><a href="#python_pdb_u8C03_u8BD5_u4EE5_u53CAsublime3_u5FEB_u6377_u952E_u8BBE_u7F6E" class="headerlink" title="python pdb调试以及sublime3快捷键设置"></a>python pdb调试以及sublime3快捷键设置</h1><h2 id="pdb_u8C03_u8BD5"><a href="#pdb_u8C03_u8BD5" class="headerlink" title="pdb调试"></a>pdb调试</h2><p>如果对gdb比较熟悉的话，pdb就很容易上手。以一个demo快速了解常用的调试命令。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span><span class="params">(a)</span>:</span></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">        <span class="keyword">if</span> a &gt; <span class="number">10</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        a += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    test(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>python -m pdb test.py进入调试环境</li>
+<li><p>b test<br>在test函数处设置断点，断点号为1</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(Pdb) b test</span><br><span class="line">Breakpoint <span class="number">1</span> at f:\python\pdb\test.py:<span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>b 2<br>在第二行设置断点，断点号为2</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(Pdb) b <span class="number">2</span></span><br><span class="line">Breakpoint <span class="number">2</span> at f:\python\pdb\test.py:<span class="number">2</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>condition 2 a==7<br>在2号断点处设置条件 a==7</p>
+</li>
+<li><p>b<br>显示所有断点信息</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(Pdb) b</span><br><span class="line">Num Type         Disp Enb   Where</span><br><span class="line"><span class="number">1</span>   breakpoint   keep yes   at f:\python\pdb\test.py:<span class="number">1</span></span><br><span class="line"><span class="number">2</span>   breakpoint   keep yes   at f:\python\pdb\test.py:<span class="number">2</span></span><br><span class="line">    stop only <span class="keyword">if</span> a==<span class="number">7</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>cl 1<br>去除1号断点，只有cl删除所有断点</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(Pdb) cl <span class="number">1</span></span><br><span class="line">Deleted breakpoint <span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>n<br>单步跟踪，不进入函数</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(Pdb) n </span><br><span class="line">&gt; f:\python\pdb\test.py(8)&lt;module&gt;()</span><br><span class="line">-&gt; if __name__ == '__main__':</span><br><span class="line">(Pdb) n </span><br><span class="line">&gt; f:\python\pdb\test.py(9)&lt;module&gt;()</span><br><span class="line">-&gt; test(1)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>s<br>单步跟踪，进入函数</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(Pdb) s</span><br><span class="line">--Call--</span><br><span class="line">&gt; f:\python\pdb\test.py(1)test()</span><br><span class="line">-&gt; def test(a):</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>c<br>继续运行在 a==7 条件断点处停止</p>
+</li>
+<li><p>p a<br>此时，打印a的值为7</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(Pdb) c </span><br><span class="line">&gt; f:\python\pdb\test.py(2)test()</span><br><span class="line">-&gt; while True:</span><br><span class="line">(Pdb) p a</span><br><span class="line">7</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>a<br>打印所在函数参数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(Pdb) a </span><br><span class="line">a = <span class="number">7</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>l<br>查看运行到某处代码</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">(Pdb) l </span><br><span class="line">  1     def test(a):</span><br><span class="line">  2 B-&gt;     while True:</span><br><span class="line">  3             if a &gt; 10:</span><br><span class="line">  4                 break</span><br><span class="line">  5             a += 1</span><br><span class="line">  6         return a</span><br><span class="line">  7     if __name__ == '__main__':</span><br><span class="line">  8         test(1)</span><br><span class="line">[EOF]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>quit<br>退出</p>
+</li>
+</ul>
+<h2 id="sublime_u8BBE_u7F6E"><a href="#sublime_u8BBE_u7F6E" class="headerlink" title="sublime设置"></a>sublime设置</h2><p>sublime设置快捷键F5为运行，Ctrl+F5调试。就会对python调试方便很多。</p>
+<ul>
+<li>Package Control中下载SublimeREPL(Read-Eval-Print-Loop)</li>
+<li>Preferneces -&gt; Key Bingdings-User进行设置<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="string">"keys"</span>: [</span><br><span class="line">      <span class="string">"f5"</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="string">"caption"</span>: <span class="string">"SublimeREPL: Python - RUN current file"</span>,</span><br><span class="line">    <span class="string">"command"</span>: <span class="string">"run_existing_window_command"</span>,</span><br><span class="line">    <span class="string">"args"</span>: &#123;</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"repl_python_run"</span>,</span><br><span class="line">      <span class="string">"file"</span>: <span class="string">"config/Python/Main.sublime-menu"</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="string">"keys"</span>: [</span><br><span class="line">      <span class="string">"ctrl+f5"</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="string">"caption"</span>: <span class="string">"SublimeREPL: Python - PDB current file"</span>,</span><br><span class="line">    <span class="string">"command"</span>: <span class="string">"run_existing_window_command"</span>,</span><br><span class="line">    <span class="string">"args"</span>:</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">"id"</span>: <span class="string">"repl_python_pdb"</span>,</span><br><span class="line">        <span class="string">"file"</span>: <span class="string">"config/Python/Main.sublime-menu"</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/12/12/nodejs中EventEmitter/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          nodejs中EventEmitter
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/12/12/yield/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">iterr, yield与enumerate的模拟实现</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="pdb调试与sublime快捷键设置" data-title="pdb调试与sublime快捷键设置" data-url="http://yoursite.com/2015/12/12/pdb调试与sublime快捷键设置/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 shanyue
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: undefined,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+  </div>
+</body>
+</html>
