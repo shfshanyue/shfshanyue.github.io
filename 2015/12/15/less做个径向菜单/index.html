@@ -15,7 +15,7 @@ less与scssscss基于ruby，使用在服务器端。less基于node，可以直�
 <meta property="og:description" content="在慕课网发现了一个有意思的课程，叫 数学知识在CSS动画中的应用 。用到的数学知识是如何计算圆上每个点的坐标。统一名称，中间的菜单叫触发菜单，四周发散的菜单叫子菜单。
 慕课网通过jquery计算子菜单的坐标，控制相应的css属性，来实现这一功能。有关计算，又有关css属性，那么css预处理器便是一个不错的选择。
 less与scssscss基于ruby，使用在服务器端。less基于node，可以直接">
-<meta property="og:updated_time" content="2015-12-15T13:59:54.006Z">
+<meta property="og:updated_time" content="2015-12-15T14:04:05.379Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="less做个径向菜单">
 <meta name="twitter:description" content="在慕课网发现了一个有意思的课程，叫 数学知识在CSS动画中的应用 。用到的数学知识是如何计算圆上每个点的坐标。统一名称，中间的菜单叫触发菜单，四周发散的菜单叫子菜单。
@@ -101,7 +101,7 @@ less与scssscss基于ruby，使用在服务器端。less基于node，可以直�
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/前端-css/" style="font-size: 10px;">前端 css</a>
+						<a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/前端-css/" style="font-size: 10px;">前端, css</a>
 					</div>
 				</section>
 				
@@ -177,7 +177,7 @@ less与scssscss基于ruby，使用在服务器端。less基于node，可以直�
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端-css/">前端 css</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端-css/">前端, css</a></li></ul>
 	</div>
 
         
@@ -205,7 +205,7 @@ less与scssscss基于ruby，使用在服务器端。less基于node，可以直�
 <p>注意其下用的是<code>nth-of-type</code>。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.generate-circle</span>(<span class="at_rule">@<span class="keyword">i:</span> <span class="number">1</span>) when (@i &lt; @count + <span class="number">1</span>) </span>&#123;</span><br><span class="line">    &amp; ~ <span class="class">.circle</span><span class="pseudo">:nth-of-type(</span><span class="at_rule">@<span class="keyword">&#123;i&#125;)</span> </span>&#123;</span><br><span class="line">        <span class="class">.radius</span>(<span class="at_rule">@<span class="keyword">circle-radius,</span> @color)</span>;</span><br><span class="line">        <span class="at_rule">@<span class="keyword">top:</span> <span class="function">round</span>(<span class="function">sin</span>(<span class="function">pi</span>() * <span class="number">2</span> * (@i - <span class="number">1</span>)/ @count) * @distance) - @circle-radius</span>;</span><br><span class="line">        <span class="at_rule">@<span class="keyword">left:</span> <span class="function">round</span>(<span class="function">cos</span>(<span class="function">pi</span>() * <span class="number">2</span> * (@i - <span class="number">1</span>)/ @count) * @distance) - @circle-radius</span>;</span><br><span class="line">        <span class="tag">transform</span>: <span class="tag">translate</span>(<span class="at_rule">@<span class="keyword">top,</span> @left)</span>;</span><br><span class="line">        <span class="tag">opacity</span>: 1;</span><br><span class="line">        <span class="tag">font-size</span>: 1<span class="tag">em</span>;</span><br><span class="line">        <span class="tag">transition</span>: <span class="tag">all</span> 800<span class="tag">ms</span> <span class="tag">ease</span>;</span><br><span class="line">        &amp;<span class="pseudo">:hover</span> <span class="rules">&#123;</span><br><span class="line">            <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#033</span></span></span>;</span><br><span class="line">        &#125;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="class">.generate-circle</span>(<span class="at_rule">@<span class="keyword">i</span> + <span class="number">1</span>)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="u6E90_u7801"><a href="#u6E90_u7801" class="headerlink" title="源码"></a>源码</h2><p><a href="https://github.com/shfshanyue/less-circle-menu" target="_blank" rel="external">使用less做的径向菜单</a><br><a href="http://shfshanyue.github.io/less-circle-menu/" target="_blank" rel="external">效果预览</a></p>
-<h2 id="u53C2_u8003"><a href="#u53C2_u8003" class="headerlink" title="参考"></a>参考</h2><p><a href="http://less.bootcss.com/features/#mixins-feature" target="_blank" rel="external">less语言特性</a><br><a href="http://efe.baidu.com/blog/revisiting-css-preprocessors/" target="_blank" rel="external">再谈 CSS 预处理器</a></p>
+<h2 id="u53C2_u8003"><a href="#u53C2_u8003" class="headerlink" title="参考"></a>参考</h2><p><a href="http://less.bootcss.com/features/#mixins-feature" target="_blank" rel="external">less语言特性</a><br><a href="http://efe.baidu.com/blog/revisiting-css-preprocessors/" target="_blank" rel="external">再谈 CSS 预处理器</a><br><a href="http://www.imooc.com/learn/362" target="_blank" rel="external">数学知识在CSS动画中的应用</a></p>
 
       
     </div>
