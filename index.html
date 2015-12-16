@@ -170,15 +170,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
-<li>http-server(node)<br><code>http-server</code>命令可以访问当前文件夹，可以<code>-p</code>设置端口号（默认为8080），<code>-a</code>设置ip地址。<br>这个命令基于node，所以需要事先安装node，然后使用npm全局安装http-server。</li>
-</ol>
+        <h2 id="http-server_28node_29"><a href="#http-server_28node_29" class="headerlink" title="http-server(node)"></a>http-server(node)</h2><p><code>http-server</code>命令可以访问当前文件夹，可以<code>-p</code>设置端口号（默认为8080），<code>-a</code>设置ip地址。<br>这个命令基于node，所以需要事先安装node，然后使用npm全局安装http-server。</p>
 <blockquote>
 <p>$ npm install http-server -g<br>$ http-server<br>Starting up http-server, serving ./<br>Available on:<br>  http:192.168.56.1:8080<br>  http:192.168.0.100:8080<br>  http:127.0.0.1:8080<br>Hit CTRL-C to stop the server<br>[Wed, 16 Dec 2015 15:23:11 GMT] “GET /.cnpm/“ “Mozilla/5.0 (Windows NT 10.0; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0”</p>
 </blockquote>
-<ol>
-<li>python -m http.server<br>另一种方法使用python3的http.server，同样也可以指定端口，默认端口是8000。当然，也要事先装python3。</li>
-</ol>
+<h2 id="python3_-m_http-server"><a href="#python3_-m_http-server" class="headerlink" title="python3 -m http.server"></a>python3 -m http.server</h2><p>另一种方法使用python3的http.server，同样也可以指定端口，默认端口是8000。当然，也要事先装python3。</p>
 <blockquote>
 <p>$ python3 -m http.server<br>Serving HTTP on 0.0.0.0 port 8000 …</p>
 </blockquote>
