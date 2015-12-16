@@ -92,7 +92,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a>
+						<a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a>
 					</div>
 				</section>
 				
@@ -144,6 +144,72 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-本地搭建静态服务器" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/16/本地搭建静态服务器/" class="article-date">
+  	<time datetime="2015-12-16T15:08:32.000Z" itemprop="datePublished">2015-12-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/16/本地搭建静态服务器/">本地搭建静态服务器</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>http-server(node)<br><code>http-server</code>命令可以访问当前文件夹，可以<code>-p</code>设置端口号（默认为8080），<code>-a</code>设置ip地址。<br>这个命令基于node，所以需要事先安装node，然后使用npm全局安装http-server。</li>
+</ol>
+<blockquote>
+<p>$ npm install http-server -g<br>$ http-server<br>Starting up http-server, serving ./<br>Available on:<br>  http:192.168.56.1:8080<br>  http:192.168.0.100:8080<br>  http:127.0.0.1:8080<br>Hit CTRL-C to stop the server<br>[Wed, 16 Dec 2015 15:23:11 GMT] “GET /.cnpm/“ “Mozilla/5.0 (Windows NT 10.0; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0”</p>
+</blockquote>
+<ol>
+<li>python -m http.server<br>另一种方法使用python3的http.server，同样也可以指定端口，默认端口是8000。当然，也要事先装python3。</li>
+</ol>
+<blockquote>
+<p>$ python3 -m http.server<br>Serving HTTP on 0.0.0.0 port 8000 …</p>
+</blockquote>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-less做个径向菜单" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -170,26 +236,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在慕课网发现了一个有意思的课程，叫 <a href="http://www.imooc.com/learn/362" target="_blank" rel="external">数学知识在CSS动画中的应用</a> 。用到的数学知识是如何计算圆上每个点的坐标。统一名称，中间的菜单叫触发菜单，四周发散的菜单叫子菜单。</p>
+        <p>在慕课网发现了一个有意思的课程，叫 <a href="http://www.imooc.com/learn/362">数学知识在CSS动画中的应用</a> 。用到的数学知识是如何计算圆上每个点的坐标。统一名称，中间的菜单叫触发菜单，四周发散的菜单叫子菜单。</p>
 <p>慕课网通过jquery计算子菜单的坐标，控制相应的css属性，来实现这一功能。<br>有关计算，又有关css属性，那么css预处理器便是一个不错的选择。</p>
-<p><a href="http://shfshanyue.github.io/less-circle-menu/" target="_blank" rel="external">效果预览</a></p>
-<h2 id="less_u4E0Escss"><a href="#less_u4E0Escss" class="headerlink" title="less与scss"></a>less与scss</h2><p>scss基于ruby，使用在服务器端。less基于node，可以直接在浏览器端使用，但会消耗更多的性能。所以两者一般都会在前期使用工具编译为css。scss不支持三角函数，less却能够很好的支持三角函数，less便成了一个不错的选择。</p>
-<p>先把大致布局放在这里。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"btn"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">class</span>=<span class="value">"toggle"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"circle"</span>&gt;</span>1<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"circle"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"circle"</span>&gt;</span>3<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"circle"</span>&gt;</span>4<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"circle"</span>&gt;</span>5<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"circle"</span>&gt;</span>6<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"circle"</span>&gt;</span>7<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"circle"</span>&gt;</span>8<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"circle"</span>&gt;</span>9<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"circle"</span>&gt;</span>10<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"circle"</span>&gt;</span>11<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"circle"</span>&gt;</span>12<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="u7EDD_u5BF9_u5B9A_u4F4D_u5C45_u4E2D"><a href="#u7EDD_u5BF9_u5B9A_u4F4D_u5C45_u4E2D" class="headerlink" title="绝对定位居中"></a>绝对定位居中</h2><p>把径向菜单置于窗口中间，可以使用绝对定位，然后使它居中。写一个MIXIN</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.center</span>() <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">50%</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">50%</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">transform</span>:<span class="value"> <span class="function">translate</span>(-<span class="number">50%</span>, -<span class="number">50%</span>)</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
-<h2 id="u753B_u4E00_u4E2A_u5706"><a href="#u753B_u4E00_u4E2A_u5706" class="headerlink" title="画一个圆"></a>画一个圆</h2><p>以下mixin表示一个以<code>@radius</code>为半径，<code>@color</code>为背景的一个圆。圆是一个圆角半径为50%的正方形。<code>box-sizing: border-box</code>使得可以给圆添加边框长度而不至于使圆变形。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.radius</span>(<span class="at_rule">@<span class="keyword">radius,</span> @color: transparent) </span>&#123;</span><br><span class="line">    <span class="tag">width</span>: <span class="at_rule">@<span class="keyword">radius</span> * <span class="number">2</span></span>;</span><br><span class="line">    <span class="tag">height</span>: <span class="at_rule">@<span class="keyword">radius</span> * <span class="number">2</span></span>;</span><br><span class="line">    <span class="tag">border-radius</span>: 50%;</span><br><span class="line">    <span class="tag">background-color</span>: <span class="at_rule">@<span class="keyword">color;</span></span><br><span class="line">    box-sizing: border-box</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="u8BBE_u7F6E_u5F84_u5411_u83DC_u5355_u5927_u5C0F_u53CA_u521D_u59CB_u4F4D_u7F6E"><a href="#u8BBE_u7F6E_u5F84_u5411_u83DC_u5355_u5927_u5C0F_u53CA_u521D_u59CB_u4F4D_u7F6E" class="headerlink" title="设置径向菜单大小及初始位置"></a>设置径向菜单大小及初始位置</h2><p><code>.container</code>表示子菜单所在的圆，<code>.circle</code>为子菜单，初始化时无大小，<code>text-align</code>与<code>line-height</code>控制字体居中。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">    .center();</span><br><span class="line">    .radius(@distance);</span><br><span class="line">    border: 1px dotted #aaa;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.circle &#123;</span><br><span class="line">    .radius(0);</span><br><span class="line">    .center();</span><br><span class="line">    font-size: 0;</span><br><span class="line">    opacity: 0;</span><br><span class="line">    transition: all 800ms ease;</span><br><span class="line">    line-height: @circle-radius * 2;</span><br><span class="line">    text-align: center;</span><br><span class="line">    color: #ffc;</span><br><span class="line">    cursor: pointer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="u89E6_u53D1_u83DC_u5355"><a href="#u89E6_u53D1_u83DC_u5355" class="headerlink" title="触发菜单"></a>触发菜单</h2><p>点击触发菜单会使子菜单发散。<code>checkbox</code>通过<code>:checked</code>伪类选择器可以模拟点击触发的效果，使它的透明度改为0，再增加一个装饰的<code>.btn</code>设置背景，使它看起来像一个按钮。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.btn, </span><br><span class="line">.toggle &#123;</span><br><span class="line">    .radius(@toggle-radius, rgb(0, 51, 51));</span><br><span class="line">    .center();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.toggle &#123;</span><br><span class="line">    opacity: 0;</span><br><span class="line">    cursor: pointer;</span><br><span class="line">    &amp;:checked &#123;</span><br><span class="line">        .generate-circle();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="u5B50_u83DC_u5355_u7684_u53D1_u6563"><a href="#u5B50_u83DC_u5355_u7684_u53D1_u6563" class="headerlink" title="子菜单的发散"></a>子菜单的发散</h2><p>点击触发菜单会使子菜单发散开来。此时子菜单的选择器应该使用<code>~</code>选择器。计算其位置设置translate的平移属性，并设置动画。<br>less使用循环生成每个子菜单的位置，count是子菜单的数量。不得不说，还是scss的for循环好用太多。</p>
-<p>注意其下用的是<code>nth-of-type</code>。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.generate-circle</span>(<span class="at_rule">@<span class="keyword">i:</span> <span class="number">1</span>) when (@i &lt; @count + <span class="number">1</span>) </span>&#123;</span><br><span class="line">    &amp; ~ <span class="class">.circle</span><span class="pseudo">:nth-of-type(</span><span class="at_rule">@<span class="keyword">&#123;i&#125;)</span> </span>&#123;</span><br><span class="line">        <span class="class">.radius</span>(<span class="at_rule">@<span class="keyword">circle-radius,</span> @color)</span>;</span><br><span class="line">        <span class="at_rule">@<span class="keyword">top:</span> <span class="function">round</span>(<span class="function">sin</span>(<span class="function">pi</span>() * <span class="number">2</span> * (@i - <span class="number">1</span>)/ @count) * @distance) - @circle-radius</span>;</span><br><span class="line">        <span class="at_rule">@<span class="keyword">left:</span> <span class="function">round</span>(<span class="function">cos</span>(<span class="function">pi</span>() * <span class="number">2</span> * (@i - <span class="number">1</span>)/ @count) * @distance) - @circle-radius</span>;</span><br><span class="line">        <span class="tag">transform</span>: <span class="tag">translate</span>(<span class="at_rule">@<span class="keyword">top,</span> @left)</span>;</span><br><span class="line">        <span class="tag">opacity</span>: 1;</span><br><span class="line">        <span class="tag">font-size</span>: 1<span class="tag">em</span>;</span><br><span class="line">        <span class="tag">transition</span>: <span class="tag">all</span> 800<span class="tag">ms</span> <span class="tag">ease</span>;</span><br><span class="line">        &amp;<span class="pseudo">:hover</span> <span class="rules">&#123;</span><br><span class="line">            <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#033</span></span></span>;</span><br><span class="line">        &#125;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="class">.generate-circle</span>(<span class="at_rule">@<span class="keyword">i</span> + <span class="number">1</span>)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="u6E90_u7801"><a href="#u6E90_u7801" class="headerlink" title="源码"></a>源码</h2><p><a href="https://github.com/shfshanyue/less-circle-menu" target="_blank" rel="external">使用less做的径向菜单</a><br><a href="http://shfshanyue.github.io/less-circle-menu/" target="_blank" rel="external">效果预览</a></p>
-<h2 id="u53C2_u8003"><a href="#u53C2_u8003" class="headerlink" title="参考"></a>参考</h2><p><a href="http://less.bootcss.com/features/#mixins-feature" target="_blank" rel="external">less语言特性</a><br><a href="http://efe.baidu.com/blog/revisiting-css-preprocessors/" target="_blank" rel="external">再谈 CSS 预处理器</a><br><a href="http://www.imooc.com/learn/362" target="_blank" rel="external">数学知识在CSS动画中的应用</a></p>
-
       
     </div>
     
@@ -202,6 +250,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/15/less做个径向菜单/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>

@@ -5,16 +5,19 @@
   
   <title>less做个径向菜单 | 山月水风</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在慕课网发现了一个有意思的课程，叫 [数学知识在CSS动画中的应用](http://www.imooc.com/learn/362) 。用到的数学知识是如何计算圆上每个点的坐标。统一名称，中间的菜单叫触发菜单，四周发散的菜单叫子菜单。">
+  <meta name="description" content="在慕课网发现了一个有意思的课程，叫 数学知识在CSS动画中的应用 。用到的数学知识是如何计算圆上每个点的坐标。统一名称，中间的菜单叫触发菜单，四周发散的菜单叫子菜单。
+慕课网通过jquery计算子菜单的坐标，控制相应的css属性，来实现这一功能。有关计算，又有关css属性，那么css预处理器便是一个不错的选择。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="less做个径向菜单">
 <meta property="og:url" content="http://yoursite.com/2015/12/15/less做个径向菜单/index.html">
 <meta property="og:site_name" content="山月水风">
-<meta property="og:description" content="在慕课网发现了一个有意思的课程，叫 [数学知识在CSS动画中的应用](http://www.imooc.com/learn/362) 。用到的数学知识是如何计算圆上每个点的坐标。统一名称，中间的菜单叫触发菜单，四周发散的菜单叫子菜单。">
-<meta property="og:updated_time" content="2015-12-16T01:18:47.632Z">
+<meta property="og:description" content="在慕课网发现了一个有意思的课程，叫 数学知识在CSS动画中的应用 。用到的数学知识是如何计算圆上每个点的坐标。统一名称，中间的菜单叫触发菜单，四周发散的菜单叫子菜单。
+慕课网通过jquery计算子菜单的坐标，控制相应的css属性，来实现这一功能。有关计算，又有关css属性，那么css预处理器便是一个不错的选择。">
+<meta property="og:updated_time" content="2015-12-16T01:44:25.477Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="less做个径向菜单">
-<meta name="twitter:description" content="在慕课网发现了一个有意思的课程，叫 [数学知识在CSS动画中的应用](http://www.imooc.com/learn/362) 。用到的数学知识是如何计算圆上每个点的坐标。统一名称，中间的菜单叫触发菜单，四周发散的菜单叫子菜单。">
+<meta name="twitter:description" content="在慕课网发现了一个有意思的课程，叫 数学知识在CSS动画中的应用 。用到的数学知识是如何计算圆上每个点的坐标。统一名称，中间的菜单叫触发菜单，四周发散的菜单叫子菜单。
+慕课网通过jquery计算子菜单的坐标，控制相应的css属性，来实现这一功能。有关计算，又有关css属性，那么css预处理器便是一个不错的选择。">
   
     <link rel="alternative" href="/atom.xml" title="山月水风" type="application/atom+xml">
   
@@ -93,7 +96,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a>
+						<a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a>
 					</div>
 				</section>
 				
@@ -182,6 +185,7 @@
       
         <p>在慕课网发现了一个有意思的课程，叫 <a href="http://www.imooc.com/learn/362" target="_blank" rel="external">数学知识在CSS动画中的应用</a> 。用到的数学知识是如何计算圆上每个点的坐标。统一名称，中间的菜单叫触发菜单，四周发散的菜单叫子菜单。</p>
 <p>慕课网通过jquery计算子菜单的坐标，控制相应的css属性，来实现这一功能。<br>有关计算，又有关css属性，那么css预处理器便是一个不错的选择。</p>
+<a id="more"></a>
 <p><a href="http://shfshanyue.github.io/less-circle-menu/" target="_blank" rel="external">效果预览</a></p>
 <h2 id="less_u4E0Escss"><a href="#less_u4E0Escss" class="headerlink" title="less与scss"></a>less与scss</h2><p>scss基于ruby，使用在服务器端。less基于node，可以直接在浏览器端使用，但会消耗更多的性能。所以两者一般都会在前期使用工具编译为css。scss不支持三角函数，less却能够很好的支持三角函数，less便成了一个不错的选择。</p>
 <p>先把大致布局放在这里。</p>
@@ -207,6 +211,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2015/12/16/本地搭建静态服务器/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          本地搭建静态服务器
+        
+      </div>
+    </a>
   
   
     <a href="/2015/12/12/python-关于dict的总结/" id="article-nav-older" class="article-nav-link-wrap">
