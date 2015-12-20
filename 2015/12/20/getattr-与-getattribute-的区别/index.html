@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2015/12/20/getattr-与-getattribute-的区别/index.html">
 <meta property="og:site_name" content="山月水风">
 <meta property="og:description" content="123456789101112131415class C:    def __getattr__(self, name):        return &apos;[private]&apos; + object.__getattribute__(self, name)    def __getattribute__(self, name):        if name.startswith(&apos;_&apos;):">
-<meta property="og:updated_time" content="2015-12-20T02:20:28.731Z">
+<meta property="og:updated_time" content="2015-12-20T02:30:30.258Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="__getattr__ 与 __getattribute__ 的区别">
 <meta name="twitter:description" content="123456789101112131415class C:    def __getattr__(self, name):        return &apos;[private]&apos; + object.__getattribute__(self, name)    def __getattribute__(self, name):        if name.startswith(&apos;_&apos;):">
@@ -184,7 +184,7 @@
 <a id="more"></a>
 <ol>
 <li>在旧式类中不存在这两个属性，而python3中都是新式类。以上代码为python3。</li>
-<li>通过实例访问属性时，都会调用<code>__getattribute__</code>，若访问属性需要调用<code>object.__getattribute__(self, *args, **kwargs)</code>。直接调用自身属性会引发异常，python3引发<code>RecursionError: maximum recursion depth exceeded while calling a Python object</code><br>。python2引发<code>RuntimeError: maximum recursion depth exceeded while calling a Python object</code>。</li>
+<li>通过实例访问属性时，都会调用<code>__getattribute__</code>，若访问属性需要调用<code>object.__getattribute__(self, *args, **kwargs)</code>。直接调用自身属性会引发异常，python3引发<code>RecursionError: maximum recursion depth exceeded while calling a Python object</code>。python2引发<code>RuntimeError: maximum recursion depth exceeded while calling a Python object</code>。</li>
 <li>当属性不存在或者<code>__getattribute__</code>引发<code>AttributeError</code>异常时。会调用<code>__getattr__</code>。</li>
 </ol>
 
