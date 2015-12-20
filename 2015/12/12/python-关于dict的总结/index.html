@@ -9,8 +9,7 @@
 使用zip创建字典创建字典有以下三种方法
 123dict(a=1, b=2, c=2)dict([(a,1), (b,2), (c,3)])dict(&amp;#123;a:1, b:2, c:3&amp;#125;)
 推荐使用第二种方法结合zip创建
-123key = &apos;abcde&apos;value = range(1, 6)dict(zip(key, value))
-使用">
+123key = &apos;abcde&apos;value = range(1, 6)dict(zip(key, value))">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python 关于dict的总结">
 <meta property="og:url" content="http://yoursite.com/2015/12/12/python-关于dict的总结/index.html">
@@ -19,17 +18,15 @@
 使用zip创建字典创建字典有以下三种方法
 123dict(a=1, b=2, c=2)dict([(a,1), (b,2), (c,3)])dict(&amp;#123;a:1, b:2, c:3&amp;#125;)
 推荐使用第二种方法结合zip创建
-123key = &apos;abcde&apos;value = range(1, 6)dict(zip(key, value))
-使用">
-<meta property="og:updated_time" content="2015-12-13T01:13:06.298Z">
+123key = &apos;abcde&apos;value = range(1, 6)dict(zip(key, value))">
+<meta property="og:updated_time" content="2015-12-20T02:21:14.577Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python 关于dict的总结">
 <meta name="twitter:description" content="总结了一些关于字典的小技巧或者注意的地方。
 使用zip创建字典创建字典有以下三种方法
 123dict(a=1, b=2, c=2)dict([(a,1), (b,2), (c,3)])dict(&amp;#123;a:1, b:2, c:3&amp;#125;)
 推荐使用第二种方法结合zip创建
-123key = &apos;abcde&apos;value = range(1, 6)dict(zip(key, value))
-使用">
+123key = &apos;abcde&apos;value = range(1, 6)dict(zip(key, value))">
   
     <link rel="alternative" href="/atom.xml" title="山月水风" type="application/atom+xml">
   
@@ -200,6 +197,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dict(a=<span class="number">1</span>, b=<span class="number">2</span>, c=<span class="number">2</span>)</span><br><span class="line">dict([(a,<span class="number">1</span>), (b,<span class="number">2</span>), (c,<span class="number">3</span>)])</span><br><span class="line">dict(&#123;a:<span class="number">1</span>, b:<span class="number">2</span>, c:<span class="number">3</span>&#125;)</span><br></pre></td></tr></table></figure>
 <p>推荐使用第二种方法结合zip创建</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">key = <span class="string">'abcde'</span></span><br><span class="line">value = range(<span class="number">1</span>, <span class="number">6</span>)</span><br><span class="line">dict(zip(key, value))</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h2 id="u4F7F_u7528iteritems_u6765_u904D_u5386_u5B57_u5178"><a href="#u4F7F_u7528iteritems_u6765_u904D_u5386_u5B57_u5178" class="headerlink" title="使用iteritems来遍历字典"></a>使用iteritems来遍历字典</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">d = dict(a=<span class="number">1</span>, b=<span class="number">2</span>, c=<span class="number">3</span>)</span><br><span class="line"><span class="keyword">for</span> k, v <span class="keyword">in</span> d.iteritems():</span><br><span class="line">    <span class="keyword">print</span> k, v</span><br><span class="line"><span class="comment"># a 1</span></span><br><span class="line"><span class="comment"># c 3</span></span><br><span class="line"><span class="comment"># b 2</span></span><br></pre></td></tr></table></figure>
 <p>当然也可以使用items来遍历字典, 与之不同的是iteritems返回一个迭代器。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">d = dict(a=<span class="number">1</span>, b=<span class="number">2</span>, c=<span class="number">3</span>)</span><br><span class="line"><span class="keyword">for</span> k, v <span class="keyword">in</span> d.items():</span><br><span class="line">    <span class="keyword">print</span> k, v</span><br><span class="line"><span class="comment"># a 1</span></span><br><span class="line"><span class="comment"># c 3</span></span><br><span class="line"><span class="comment"># b 2</span></span><br></pre></td></tr></table></figure>
