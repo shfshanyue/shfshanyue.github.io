@@ -144,6 +144,66 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-getattr-与-getattribute-的区别" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/20/getattr-与-getattribute-的区别/" class="article-date">
+  	<time datetime="2015-12-20T01:56:37.000Z" itemprop="datePublished">2015-12-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/20/getattr-与-getattribute-的区别/">__getattr__ 与 __getattribute__ 的区别</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getattr__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">'[private]'</span> + object.__getattribute__(self, name)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getattribute__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> name.startswith(<span class="string">'_'</span>):</span><br><span class="line">            <span class="keyword">raise</span> AttributeError(<span class="string">'name is not exist'</span>)</span><br><span class="line">        <span class="keyword">return</span> object.__getattribute__(self, name)</span><br><span class="line"></span><br><span class="line">c = C()</span><br><span class="line">c._name = <span class="string">'guanyu'</span></span><br><span class="line">print(c._name)</span><br><span class="line"></span><br><span class="line">c.age = <span class="number">88</span></span><br><span class="line">print(c.age)</span><br></pre></td></tr></table></figure>
+<ol>
+<li>在旧式类中不存在这两个属性，而python3中都是新式类。以上代码为python3。</li>
+<li>通过实例访问属性时，都会调用<code>__getattribute__</code>，若访问属性需要调用<code>object.__getattribute__(self, *args, **kwargs)</code>。直接调用自身属性会引发异常，python3引发<code>RecursionError: maximum recursion depth exceeded while calling a Python object</code><br>。python2引发<code>RuntimeError: maximum recursion depth exceeded while calling a Python object</code>。</li>
+<li>当属性不存在或者<code>__getattribute__</code>引发<code>AttributeError</code>异常时。会调用<code>__getattr__</code>。</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-本地搭建静态服务器" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
