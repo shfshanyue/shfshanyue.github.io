@@ -92,7 +92,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a>
+						<a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a>
 					</div>
 				</section>
 				
@@ -143,6 +143,69 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-一道正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/21/一道正则表达式/" class="article-date">
+  	<time datetime="2015-12-21T14:53:12.000Z" itemprop="datePublished">2015-12-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/21/一道正则表达式/">本地搭建静态服务器</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>一个字符串由+，-，数字组成。如果每个数字都被+号所包围，返回true，否则，返回false。</p>
+</blockquote>
+<p>对于所有的字母，前后均为+符号。 ==&gt; 存在一个字母，前后不全为+符号（取反）。</p>
+<p>构建正则表达式为<code>(?&lt;!\+)\d|\d(?!\+)</code>。</p>
+<p>用python语言写</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">testStr</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">not</span> re.search(<span class="string">r'(?&lt;!\+)\d|\d(?!\+)'</span>, s)</span><br></pre></td></tr></table></figure>
+<p>用javascript写，等等，js没有负向匹配（匹配前面的字符）。<br>那么换一个思路，匹配<code>\+\d(?=\+)</code>的个数与数字的个数相同。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">testStr</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> match1 = s.match(<span class="regexp">/\+\d(?=\+)/g</span>);</span><br><span class="line">    <span class="keyword">var</span> match2 = s.match(<span class="regexp">/\d/g</span>);</span><br><span class="line">    <span class="keyword">return</span> (match1 ? match1.length: <span class="number">0</span>) === (match2 ? match2.length: <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-getattr-与-getattribute-的区别" class="article article-type-post" itemscope itemprop="blogPost">
   

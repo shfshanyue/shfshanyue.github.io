@@ -5,16 +5,31 @@
   
   <title>本地搭建静态服务器 | 山月水风</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="http-server(node)http-server命令可以访问当前文件夹，可以-p设置端口号（默认为8080），-a设置ip地址。这个命令基于node，所以需要事先安装node，然后使用npm全局安装http-server。">
+  <meta name="description" content="一个字符串由+，-，数字组成。如果每个数字都被+号所包围，返回true，否则，返回false。
+
+对于所有的字母，前后均为+符号。 ==&amp;gt; 存在一个字母，前后不全为+符号（取反）。
+构建正则表达式为(?&amp;lt;!\+)\d|\d(?!\+)。
+用python语言写
+12def testStr(s):    return not re.search(r&apos;(?&amp;lt;!\+)\d|\d(?!\+">
 <meta property="og:type" content="article">
 <meta property="og:title" content="本地搭建静态服务器">
-<meta property="og:url" content="http://yoursite.com/2015/12/16/本地搭建静态服务器/index.html">
+<meta property="og:url" content="http://yoursite.com/2015/12/21/一道正则表达式/index.html">
 <meta property="og:site_name" content="山月水风">
-<meta property="og:description" content="http-server(node)http-server命令可以访问当前文件夹，可以-p设置端口号（默认为8080），-a设置ip地址。这个命令基于node，所以需要事先安装node，然后使用npm全局安装http-server。">
-<meta property="og:updated_time" content="2015-12-20T14:23:55.523Z">
+<meta property="og:description" content="一个字符串由+，-，数字组成。如果每个数字都被+号所包围，返回true，否则，返回false。
+
+对于所有的字母，前后均为+符号。 ==&amp;gt; 存在一个字母，前后不全为+符号（取反）。
+构建正则表达式为(?&amp;lt;!\+)\d|\d(?!\+)。
+用python语言写
+12def testStr(s):    return not re.search(r&apos;(?&amp;lt;!\+)\d|\d(?!\+">
+<meta property="og:updated_time" content="2015-12-21T14:53:38.818Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="本地搭建静态服务器">
-<meta name="twitter:description" content="http-server(node)http-server命令可以访问当前文件夹，可以-p设置端口号（默认为8080），-a设置ip地址。这个命令基于node，所以需要事先安装node，然后使用npm全局安装http-server。">
+<meta name="twitter:description" content="一个字符串由+，-，数字组成。如果每个数字都被+号所包围，返回true，否则，返回false。
+
+对于所有的字母，前后均为+符号。 ==&amp;gt; 存在一个字母，前后不全为+符号（取反）。
+构建正则表达式为(?&amp;lt;!\+)\d|\d(?!\+)。
+用python语言写
+12def testStr(s):    return not re.search(r&apos;(?&amp;lt;!\+)\d|\d(?!\+">
   
     <link rel="alternative" href="/atom.xml" title="山月水风" type="application/atom+xml">
   
@@ -143,11 +158,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-本地搭建静态服务器" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-一道正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/12/16/本地搭建静态服务器/" class="article-date">
-  	<time datetime="2015-12-16T15:08:32.000Z" itemprop="datePublished">2015-12-16</time>
+      <a href="/2015/12/21/一道正则表达式/" class="article-date">
+  	<time datetime="2015-12-21T14:53:12.000Z" itemprop="datePublished">2015-12-21</time>
 </a>
     </div>
   
@@ -169,7 +184,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
 	</div>
 
         
@@ -180,15 +195,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="http-server_28node_29"><a href="#http-server_28node_29" class="headerlink" title="http-server(node)"></a>http-server(node)</h2><p><code>http-server</code>命令可以访问当前文件夹，可以<code>-p</code>设置端口号（默认为8080），<code>-a</code>设置ip地址。<br>这个命令基于node，所以需要事先安装node，然后使用npm全局安装http-server。<br><a id="more"></a></p>
-<blockquote>
-<p>$ npm install http-server -g<br>$ http-server<br>Starting up http-server, serving ./<br>Available on:<br>  http:192.168.56.1:8080<br>  http:192.168.0.100:8080<br>  http:127.0.0.1:8080<br>Hit CTRL-C to stop the server<br>[Wed, 16 Dec 2015 15:23:11 GMT] “GET /.cnpm/“ “Mozilla/5.0 (Windows NT 10.0; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0”</p>
+        <blockquote>
+<p>一个字符串由+，-，数字组成。如果每个数字都被+号所包围，返回true，否则，返回false。</p>
 </blockquote>
-<p>另外http-server还可以设置proxy，https，通过robots.txt设置爬虫规则。功能强大</p>
-<h2 id="python3_-m_http-server"><a href="#python3_-m_http-server" class="headerlink" title="python3 -m http.server"></a>python3 -m http.server</h2><p>另一种方法使用python3的http.server，同样也可以指定端口，默认端口是8000。当然，也要事先装python3。</p>
-<blockquote>
-<p>$ python3 -m http.server<br>Serving HTTP on 0.0.0.0 port 8000 …</p>
-</blockquote>
+<p>对于所有的字母，前后均为+符号。 ==&gt; 存在一个字母，前后不全为+符号（取反）。</p>
+<p>构建正则表达式为<code>(?&lt;!\+)\d|\d(?!\+)</code>。</p>
+<p>用python语言写</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">testStr</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">not</span> re.search(<span class="string">r'(?&lt;!\+)\d|\d(?!\+)'</span>, s)</span><br></pre></td></tr></table></figure>
+<p>用javascript写，等等，js没有负向匹配（匹配前面的字符）。<br>那么换一个思路，匹配<code>\+\d(?=\+)</code>的个数与数字的个数相同。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">testStr</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> match1 = s.match(<span class="regexp">/\+\d(?=\+)/g</span>);</span><br><span class="line">    <span class="keyword">var</span> match2 = s.match(<span class="regexp">/\d/g</span>);</span><br><span class="line">    <span class="keyword">return</span> (match1 ? match1.length: <span class="number">0</span>) === (match2 ? match2.length: <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -198,18 +213,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/12/20/getattr-与-getattribute-的区别/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          __getattr__ 与 __getattribute__ 的区别
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/12/15/less做个径向菜单/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">less做个径向菜单</div>
+    <a href="/2015/12/20/getattr-与-getattribute-的区别/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">__getattr__ 与 __getattribute__ 的区别</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -238,7 +244,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="本地搭建静态服务器" data-title="本地搭建静态服务器" data-url="http://yoursite.com/2015/12/16/本地搭建静态服务器/"></div>
+	<div class="ds-thread" data-thread-key="一道正则表达式" data-title="本地搭建静态服务器" data-url="http://yoursite.com/2015/12/21/一道正则表达式/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
