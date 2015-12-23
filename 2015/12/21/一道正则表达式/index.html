@@ -8,9 +8,7 @@
   <meta name="description" content="一个字符串由+，-，数字组成。如果每个数字都被+号所包围，返回true，否则，返回false。
 
 对于所有的字母，前后均为+符号。 ==&amp;gt; 存在一个字母，前后不全为+符号（取反）。
-构建正则表达式为(?&amp;lt;!\+)\d|\d(?!\+)。
-用python语言写
-12def testStr(s):    return not re.search(r&apos;(?&amp;lt;!\+)\d|\d(?!\+">
+构建正则表达式为(?&amp;lt;!\+)\d|\d(?!\+)。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一道正则表达式的问题">
 <meta property="og:url" content="http://yoursite.com/2015/12/21/一道正则表达式/index.html">
@@ -18,18 +16,14 @@
 <meta property="og:description" content="一个字符串由+，-，数字组成。如果每个数字都被+号所包围，返回true，否则，返回false。
 
 对于所有的字母，前后均为+符号。 ==&amp;gt; 存在一个字母，前后不全为+符号（取反）。
-构建正则表达式为(?&amp;lt;!\+)\d|\d(?!\+)。
-用python语言写
-12def testStr(s):    return not re.search(r&apos;(?&amp;lt;!\+)\d|\d(?!\+">
-<meta property="og:updated_time" content="2015-12-21T14:59:44.940Z">
+构建正则表达式为(?&amp;lt;!\+)\d|\d(?!\+)。">
+<meta property="og:updated_time" content="2015-12-23T11:07:58.927Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一道正则表达式的问题">
 <meta name="twitter:description" content="一个字符串由+，-，数字组成。如果每个数字都被+号所包围，返回true，否则，返回false。
 
 对于所有的字母，前后均为+符号。 ==&amp;gt; 存在一个字母，前后不全为+符号（取反）。
-构建正则表达式为(?&amp;lt;!\+)\d|\d(?!\+)。
-用python语言写
-12def testStr(s):    return not re.search(r&apos;(?&amp;lt;!\+)\d|\d(?!\+">
+构建正则表达式为(?&amp;lt;!\+)\d|\d(?!\+)。">
   
     <link rel="alternative" href="/atom.xml" title="山月水风" type="application/atom+xml">
   
@@ -199,7 +193,7 @@
 <p>一个字符串由+，-，数字组成。如果每个数字都被+号所包围，返回true，否则，返回false。</p>
 </blockquote>
 <p>对于所有的字母，前后均为+符号。 ==&gt; 存在一个字母，前后不全为+符号（取反）。</p>
-<p>构建正则表达式为<code>(?&lt;!\+)\d|\d(?!\+)</code>。</p>
+<p>构建正则表达式为<code>(?&lt;!\+)\d|\d(?!\+)</code>。<br><a id="more"></a></p>
 <p>用python语言写</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">testStr</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">not</span> re.search(<span class="string">r'(?&lt;!\+)\d|\d(?!\+)'</span>, s)</span><br></pre></td></tr></table></figure>
 <p>用javascript写，等等，js没有负向匹配（匹配前面的字符）。<br>那么换一个思路，匹配<code>\+\d(?=\+)</code>的个数与数字的个数相同。</p>
