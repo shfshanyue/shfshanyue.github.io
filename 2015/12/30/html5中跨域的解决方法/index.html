@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>__getattr__ 与 __getattribute__ 的区别 | 山月水风</title>
+  <title>html5 web workers | 山月水风</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="123456789101112131415class C:    def __getattr__(self, name):        return &apos;[private]&apos; + object.__getattribute__(self, name)    def __getattribute__(self, name):        if name.startswith(&apos;_&apos;):">
+  <meta name="description" content="同源指相同的域名，协议，端口。浏览器只能请求当前源的资源，请求其它源的请求则是跨域。在html5中可以使用postMessage进行跨域。以下是一个很简单的示例（无浏览器支持检查，无异常检查）。
+123456789// worker.jsvar i = 0;function timedCount() &amp;#123;    postMessage(i);    i++;    setTimeout(t">
 <meta property="og:type" content="article">
-<meta property="og:title" content="__getattr__ 与 __getattribute__ 的区别">
-<meta property="og:url" content="http://yoursite.com/2015/12/20/getattr-与-getattribute-的区别/index.html">
+<meta property="og:title" content="html5 web workers">
+<meta property="og:url" content="http://yoursite.com/2015/12/30/html5中跨域的解决方法/index.html">
 <meta property="og:site_name" content="山月水风">
-<meta property="og:description" content="123456789101112131415class C:    def __getattr__(self, name):        return &apos;[private]&apos; + object.__getattribute__(self, name)    def __getattribute__(self, name):        if name.startswith(&apos;_&apos;):">
-<meta property="og:updated_time" content="2015-12-20T02:30:30.258Z">
+<meta property="og:description" content="同源指相同的域名，协议，端口。浏览器只能请求当前源的资源，请求其它源的请求则是跨域。在html5中可以使用postMessage进行跨域。以下是一个很简单的示例（无浏览器支持检查，无异常检查）。
+123456789// worker.jsvar i = 0;function timedCount() &amp;#123;    postMessage(i);    i++;    setTimeout(t">
+<meta property="og:updated_time" content="2015-12-31T03:42:47.036Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="__getattr__ 与 __getattribute__ 的区别">
-<meta name="twitter:description" content="123456789101112131415class C:    def __getattr__(self, name):        return &apos;[private]&apos; + object.__getattribute__(self, name)    def __getattribute__(self, name):        if name.startswith(&apos;_&apos;):">
+<meta name="twitter:title" content="html5 web workers">
+<meta name="twitter:description" content="同源指相同的域名，协议，端口。浏览器只能请求当前源的资源，请求其它源的请求则是跨域。在html5中可以使用postMessage进行跨域。以下是一个很简单的示例（无浏览器支持检查，无异常检查）。
+123456789// worker.jsvar i = 0;function timedCount() &amp;#123;    postMessage(i);    i++;    setTimeout(t">
   
     <link rel="alternative" href="/atom.xml" title="山月水风" type="application/atom+xml">
   
@@ -143,11 +146,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-getattr-与-getattribute-的区别" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-html5中跨域的解决方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/12/20/getattr-与-getattribute-的区别/" class="article-date">
-  	<time datetime="2015-12-20T01:56:37.000Z" itemprop="datePublished">2015-12-20</time>
+      <a href="/2015/12/30/html5中跨域的解决方法/" class="article-date">
+  	<time datetime="2015-12-30T12:10:44.000Z" itemprop="datePublished">2015-12-30</time>
 </a>
     </div>
   
@@ -160,7 +163,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      __getattr__ 与 __getattribute__ 的区别
+      html5 web workers
     </h1>
   
 
@@ -169,7 +172,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li></ul>
 	</div>
 
         
@@ -180,14 +183,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getattr__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">'[private]'</span> + object.__getattribute__(self, name)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getattribute__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> name.startswith(<span class="string">'_'</span>):</span><br><span class="line">            <span class="keyword">raise</span> AttributeError(<span class="string">'name is not exist'</span>)</span><br><span class="line">        <span class="keyword">return</span> object.__getattribute__(self, name)</span><br><span class="line"></span><br><span class="line">c = C()</span><br><span class="line">c._name = <span class="string">'guanyu'</span></span><br><span class="line">print(c._name)</span><br><span class="line"></span><br><span class="line">c.age = <span class="number">88</span></span><br><span class="line">print(c.age)</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<ol>
-<li>在旧式类中不存在这两个属性，而python3中都是新式类。以上代码为python3。</li>
-<li>通过实例访问属性时，都会调用<code>__getattribute__</code>，若访问属性需要调用<code>object.__getattribute__(self, *args, **kwargs)</code>。直接调用自身属性会引发异常，python3引发<code>RecursionError: maximum recursion depth exceeded while calling a Python object</code>。python2引发<code>RuntimeError: maximum recursion depth exceeded while calling a Python object</code>。</li>
-<li>当属性不存在或者<code>__getattribute__</code>引发<code>AttributeError</code>异常时。会调用<code>__getattr__</code>。</li>
-</ol>
-
+        <p>同源指相同的域名，协议，端口。浏览器只能请求当前源的资源，请求其它源的请求则是跨域。<br>在html5中可以使用postMessage进行跨域。以下是一个很简单的示例（无浏览器支持检查，无异常检查）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// worker.js</span></span><br><span class="line"><span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">timedCount</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    postMessage(i);</span><br><span class="line">    i++;</span><br><span class="line">    setTimeout(timedCount, <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">timedCount();</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- index.html --&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">    Count: <span class="tag">&lt;<span class="title">span</span> <span class="attribute">id</span>=<span class="value">"count"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span><br><span class="line">    <span class="keyword">var</span> w = <span class="keyword">new</span> Worker(<span class="string">'worker.js'</span>);</span><br><span class="line"></span><br><span class="line">    w.onmessage = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(event);</span><br><span class="line">        <span class="built_in">document</span>.getElementById(<span class="string">'count'</span>).innerHTML = event.data;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -196,18 +194,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/12/21/一道正则表达式/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          一道正则表达式的问题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/12/16/本地搭建静态服务器/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">本地搭建静态服务器</div>
+    <a href="/2015/12/30/css中的像素值/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">css中的像素值</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -236,7 +225,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="getattr-与-getattribute-的区别" data-title="__getattr__ 与 __getattribute__ 的区别" data-url="http://yoursite.com/2015/12/20/getattr-与-getattribute-的区别/"></div>
+	<div class="ds-thread" data-thread-key="html5中跨域的解决方法" data-title="html5 web workers" data-url="http://yoursite.com/2015/12/30/html5中跨域的解决方法/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

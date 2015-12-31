@@ -92,7 +92,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/algorithm/" style="font-size: 15px;">algorithm</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a>
+						<a href="/tags/algorithm/" style="font-size: 15px;">algorithm</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a>
 					</div>
 				</section>
 				
@@ -144,6 +144,121 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-html5中跨域的解决方法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/30/html5中跨域的解决方法/" class="article-date">
+  	<time datetime="2015-12-30T12:10:44.000Z" itemprop="datePublished">2015-12-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/30/html5中跨域的解决方法/">html5 web workers</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>同源指相同的域名，协议，端口。浏览器只能请求当前源的资源，请求其它源的请求则是跨域。<br>在html5中可以使用postMessage进行跨域。以下是一个很简单的示例（无浏览器支持检查，无异常检查）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// worker.js</span></span><br><span class="line"><span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">timedCount</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    postMessage(i);</span><br><span class="line">    i++;</span><br><span class="line">    setTimeout(timedCount, <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">timedCount();</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- index.html --&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">    Count: <span class="tag">&lt;<span class="title">span</span> <span class="attribute">id</span>=<span class="value">"count"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span><br><span class="line">    <span class="keyword">var</span> w = <span class="keyword">new</span> Worker(<span class="string">'worker.js'</span>);</span><br><span class="line"></span><br><span class="line">    w.onmessage = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(event);</span><br><span class="line">        <span class="built_in">document</span>.getElementById(<span class="string">'count'</span>).innerHTML = event.data;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-css中的像素值" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/30/css中的像素值/" class="article-date">
+  	<time datetime="2015-12-30T11:07:32.000Z" itemprop="datePublished">2015-12-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/30/css中的像素值/">css中的像素值</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>em: 相对于父元素的像素值</li>
+<li>rem: 相对于根元素（html）的像素值</li>
+</ul>
+<p>好像就这些了。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-一个字符串是否能够转化为对称字符串" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -173,10 +288,7 @@
         <blockquote>
 <p>如何判断一个字符串是否可转化为可对称形式的字符串。如<code>abcabc</code>可转化为<code>abccba</code>，为可转化字符。</p>
 </blockquote>
-<h2 id="python"><a href="#python" class="headerlink" title="python"></a>python</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(strs)</span>:</span></span><br><span class="line">    count = Counter(strs)</span><br><span class="line">    flag = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> v <span class="keyword">in</span> count.values():</span><br><span class="line">        <span class="keyword">if</span> v % <span class="number">2</span>:</span><br><span class="line">            flag += <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> flag == <span class="number">2</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">可以使用列表推导式，虽然代码写得比较简洁了，但是复杂度却提高了。因为它会统计单数字符的个数，但是只要单数字符的个数大于<span class="number">1</span>就可以判断。</span><br><span class="line">``` python</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(strs)</span>:</span></span><br><span class="line">    count = Counter(strs)</span><br><span class="line">    length = len([v <span class="keyword">for</span> v <span class="keyword">in</span> count.values() <span class="keyword">if</span> v % <span class="number">2</span>])</span><br><span class="line">    <span class="keyword">return</span> length &lt; <span class="number">2</span></span><br></pre></td></tr></table></figure>
-<p>如果不使用内置库，需要注意<code>count.get(v, 0)</code>。当键值不存在时，默认取0。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f2</span><span class="params">(strs)</span>:</span></span><br><span class="line">    count = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> v <span class="keyword">in</span> strs:</span><br><span class="line">        count[v] = count.get(v, <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">    length = len([v <span class="keyword">for</span> v <span class="keyword">in</span> count.values() <span class="keyword">if</span> v % <span class="number">2</span>])</span><br><span class="line">    <span class="keyword">return</span> length &lt; <span class="number">2</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> flag = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> count = &#123;&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">of</span> str) &#123;</span><br><span class="line">        count[i] = (count[i] ? count[i] : <span class="number">0</span>) + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> count) &#123;</span><br><span class="line">        <span class="keyword">if</span> (count[i] % <span class="number">2</span> &amp;&amp; ++flag === <span class="number">2</span>) </span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<p>分析：统计一个字符串内每个字符的出现次数，如果出现次数为单数的字符超过一个，则不可能为可转化的字符。</p>
       
     </div>
     
@@ -189,6 +301,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/25/一个字符串是否能够转化为对称字符串/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -620,124 +736,10 @@
 
 
   
-    <article id="post-pdb调试与sublime快捷键设置" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2015/12/12/pdb调试与sublime快捷键设置/" class="article-date">
-  	<time datetime="2015-12-12T14:03:15.000Z" itemprop="datePublished">2015-12-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/12/pdb调试与sublime快捷键设置/">pdb调试与sublime快捷键设置</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="python_pdb_u8C03_u8BD5_u4EE5_u53CAsublime3_u5FEB_u6377_u952E_u8BBE_u7F6E"><a href="#python_pdb_u8C03_u8BD5_u4EE5_u53CAsublime3_u5FEB_u6377_u952E_u8BBE_u7F6E" class="headerlink" title="python pdb调试以及sublime3快捷键设置"></a>python pdb调试以及sublime3快捷键设置</h1><h2 id="pdb_u8C03_u8BD5"><a href="#pdb_u8C03_u8BD5" class="headerlink" title="pdb调试"></a>pdb调试</h2><p>如果对gdb比较熟悉的话，pdb就很容易上手。以一个demo快速了解常用的调试命令。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span><span class="params">(a)</span>:</span></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">        <span class="keyword">if</span> a &gt; <span class="number">10</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        a += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    test(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/12/12/pdb调试与sublime快捷键设置/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-yield" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/12/yield/" class="article-date">
-  	<time datetime="2015-12-12T14:01:07.000Z" itemprop="datePublished">2015-12-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/12/yield/">iterr, yield与enumerate的模拟实现</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="u6A21_u62DF_u5B9E_u73B0_u4E00_u4E2Aenumerate_u51FD_u6570"><a href="#u6A21_u62DF_u5B9E_u73B0_u4E00_u4E2Aenumerate_u51FD_u6570" class="headerlink" title="模拟实现一个enumerate函数"></a>模拟实现一个enumerate函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">myEnumerate</span><span class="params">(seq, start=<span class="number">0</span>)</span>:</span></span><br><span class="line">    results = []</span><br><span class="line">    n = start</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> seq:</span><br><span class="line">        results.append((n, i))</span><br><span class="line">    <span class="keyword">return</span> results</span><br></pre></td></tr></table></figure>
-<p>返回一个list, 如果list数据过多，则占用内存太大。而迭代器每次只需要很小的内存。再往下看迭代器。</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/12/12/yield/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">
