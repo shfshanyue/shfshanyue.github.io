@@ -92,7 +92,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/algorithm/" style="font-size: 15px;">algorithm</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a>
+						<a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/algorithm/" style="font-size: 15px;">algorithm</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/css3/" style="font-size: 10px;">css3</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/less/" style="font-size: 10px;">less</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/python/" style="font-size: 20px;">python</a>
 					</div>
 				</section>
 				
@@ -144,6 +144,64 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-贝塞尔曲线" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/31/贝塞尔曲线/" class="article-date">
+  	<time datetime="2015-12-31T13:53:02.000Z" itemprop="datePublished">2015-12-31</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/31/贝塞尔曲线/">transition中的贝塞尔曲线</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="u53C2_u8003_u94FE_u63A5"><a href="#u53C2_u8003_u94FE_u63A5" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="http://www.w3.org/TR/css3-transitions/#transition-timing-function_tag">CSS Transitions</a><br><a href="http://www.zhangxinxu.com/wordpress/2014/06/deep-understand-svg-path-bezier-curves-command/">深度掌握SVG路径path的贝塞尔曲线指令</a></p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/31/贝塞尔曲线/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-es6中新增的数据类型" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -171,15 +229,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>ES6中新增了三种数据类型，<code>Symbol</code>，<code>Set</code>，<code>Map</code>。其中Symbol为基本数据类型，可以直接使用<code>typeof</code>检测数据类型。Set和Map是类似于Array的引用类型。</p>
-<h2 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h2><p>每一个symbol的值都是独一无二的。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s1 = <span class="built_in">Symbol</span>(<span class="string">'foo'</span>);</span><br><span class="line"><span class="keyword">var</span> s2 = <span class="built_in">Symbol</span>(<span class="string">'foo'</span>);</span><br><span class="line">s1 === s2;          <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
-<p>Symbol可以用作对象属性，并且属性不会重复。设置属性时，必须把属性置于方括号中。使用<code>Object.getOwnPropertySymbols</code>获取对象的Symobol属性。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="built_in">Symbol</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    [s]: <span class="string">'hello, wrold'</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(obj[s]);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getOwnPropertySymbols(obj))</span><br></pre></td></tr></table></figure>
-<h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><p>Set类似于数组，其中所有的元素都是不重复的。</p>
-<p>可以使用Set对数组去重。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>])    <span class="comment">// Set [ 1, 2, 3, 4, 5, 6 ]</span></span><br><span class="line"></span><br><span class="line">s.size                      <span class="comment">// 6</span></span><br><span class="line">s.has(<span class="number">1</span>)                    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr = <span class="built_in">Array</span>.from(s)     <span class="comment">// Array [ 1, 2, 3, 4, 5, 6 ]</span></span><br><span class="line"><span class="keyword">var</span> arr2 = [...s]           <span class="comment">// Array [ 1, 2, 3, 4, 5, 6 ]</span></span><br><span class="line"></span><br><span class="line">s.add(<span class="number">7</span>)                    <span class="comment">// Set [ 1, 2, 3, 4, 5, 6, 7 ]</span></span><br><span class="line">s.delete(<span class="number">7</span>)                 <span class="comment">// Set [ 1, 2, 3, 4, 5, 6]</span></span><br><span class="line"></span><br><span class="line">s.clear()</span><br></pre></td></tr></table></figure>
-<h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><p>Object和Map都是键值对的集合，不过Object只能使用字符串作为键值，Map可以使用各种数据类型作为键值。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line"></span><br><span class="line">map.set(<span class="string">'a'</span>, <span class="number">3</span>).set(<span class="string">'b'</span>, <span class="number">4</span>)</span><br><span class="line"></span><br><span class="line">map.has(<span class="string">'a'</span>)                <span class="comment">// true</span></span><br><span class="line">map.get(<span class="string">'a'</span>)                <span class="comment">// 3</span></span><br><span class="line"></span><br><span class="line">map.size                    <span class="comment">// 2</span></span><br><span class="line">    </span><br><span class="line">[...map]                    <span class="comment">// [ [ 'a', 3 ], [ 'b', 4 ] ]        </span></span><br><span class="line"></span><br><span class="line">map.delete(<span class="string">'a'</span>)             <span class="comment">// true</span></span><br><span class="line">map.delete(<span class="string">'c'</span>)             <span class="comment">// false</span></span><br><span class="line">map.clear()</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -192,6 +241,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/31/es6中新增的数据类型/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -234,8 +287,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>同源指相同的域名，协议，端口。浏览器只能请求当前源的资源，请求其它源的请求则是跨域。<br>在html5中可以使用postMessage进行跨域。以下是一个很简单的示例（无浏览器支持检查，无异常检查）。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// worker.js</span></span><br><span class="line"><span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">timedCount</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    postMessage(i);</span><br><span class="line">    i++;</span><br><span class="line">    setTimeout(timedCount, <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">timedCount();</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- index.html --&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">    Count: <span class="tag">&lt;<span class="title">span</span> <span class="attribute">id</span>=<span class="value">"count"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span><br><span class="line">    <span class="keyword">var</span> w = <span class="keyword">new</span> Worker(<span class="string">'worker.js'</span>);</span><br><span class="line"></span><br><span class="line">    w.onmessage = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(event);</span><br><span class="line">        <span class="built_in">document</span>.getElementById(<span class="string">'count'</span>).innerHTML = event.data;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -249,64 +300,9 @@
       
 
       
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-css中的像素值" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/30/css中的像素值/" class="article-date">
-  	<time datetime="2015-12-30T11:07:32.000Z" itemprop="datePublished">2015-12-30</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/30/css中的像素值/">css中的像素值</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>em: 相对于父元素的像素值</li>
-<li>rem: 相对于根元素（html）的像素值</li>
-</ul>
-<p>好像就这些了。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
-	</div>
-
-      
-
+        <p class="article-more-link">
+          <a  href="/2015/12/30/html5中跨域的解决方法/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -596,7 +592,7 @@
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/less/">less</a></li></ul>
 	</div>
 
       
@@ -751,7 +747,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2015 shanyue
+    		&copy; 2016 shanyue
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
