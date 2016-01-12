@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>vue-resource中post变为option问题 | 山月水风</title>
+  <title>vue-resource中post变为option | 山月水风</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="年与时驰，意与日去，遂成枯落，多不接世，悲守穷庐，将复何及！">
+  <meta name="description" content="在开始使用vue-source时，post请求总会变成options请求。
+12345678910111213141516new Vue(&amp;#123;    ...    ready: function() &amp;#123;        if (localStorage.getItem(&apos;posts&apos;)) &amp;#123;            this.$set(&apos;posts&apos;, JSON.parse">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue-resource中post变为option问题">
+<meta property="og:title" content="vue-resource中post变为option">
 <meta property="og:url" content="http://yoursite.com/2016/01/08/vue-resource中post变为option问题/index.html">
 <meta property="og:site_name" content="山月水风">
-<meta property="og:description" content="年与时驰，意与日去，遂成枯落，多不接世，悲守穷庐，将复何及！">
-<meta property="og:updated_time" content="2016-01-08T08:05:33.309Z">
+<meta property="og:description" content="在开始使用vue-source时，post请求总会变成options请求。
+12345678910111213141516new Vue(&amp;#123;    ...    ready: function() &amp;#123;        if (localStorage.getItem(&apos;posts&apos;)) &amp;#123;            this.$set(&apos;posts&apos;, JSON.parse">
+<meta property="og:updated_time" content="2016-01-12T07:57:34.273Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue-resource中post变为option问题">
-<meta name="twitter:description" content="年与时驰，意与日去，遂成枯落，多不接世，悲守穷庐，将复何及！">
+<meta name="twitter:title" content="vue-resource中post变为option">
+<meta name="twitter:description" content="在开始使用vue-source时，post请求总会变成options请求。
+12345678910111213141516new Vue(&amp;#123;    ...    ready: function() &amp;#123;        if (localStorage.getItem(&apos;posts&apos;)) &amp;#123;            this.$set(&apos;posts&apos;, JSON.parse">
   
     <link rel="alternative" href="/atom.xml" title="山月水风" type="application/atom+xml">
   
@@ -147,7 +150,7 @@
   
     <div class="article-meta">
       <a href="/2016/01/08/vue-resource中post变为option问题/" class="article-date">
-  	<time datetime="2016-01-08T07:58:44.000Z" itemprop="datePublished">2016-01-08</time>
+  	<time datetime="2016-01-08T10:58:44.000Z" itemprop="datePublished">2016-01-08</time>
 </a>
     </div>
   
@@ -160,7 +163,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      vue-resource中post变为option问题
+      vue-resource中post变为option
     </h1>
   
 
@@ -180,7 +183,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>在开始使用<code>vue-source</code>时，<code>post</code>请求总会变成<code>options</code>请求。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    ...</span><br><span class="line">    ready: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (localStorage.getItem(<span class="string">'posts'</span>)) &#123;</span><br><span class="line">            <span class="keyword">this</span>.$set(<span class="string">'posts'</span>, <span class="built_in">JSON</span>.parse(localStorage.getItem(<span class="string">'posts'</span>)));</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.$http.post(<span class="string">'http://localhost:3000/api'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">this</span>.$set(<span class="string">'posts'</span>, data.results);</span><br><span class="line">                localStorage.setItem(<span class="string">'posts'</span>, <span class="built_in">JSON</span>.stringify(data.results));</span><br><span class="line">            &#125;).error(<span class="function"><span class="keyword">function</span>(<span class="params">data, status, request</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    ...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="u53C2_u8003_u94FE_u63A5"><a href="#u53C2_u8003_u94FE_u63A5" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="http://segmentfault.com/a/1190000003968020" target="_blank" rel="external">Vue.js快速入门</a><br><a href="https://github.com/vuejs/vue-resource" target="_blank" rel="external">vue-resource</a></p>
+
       
     </div>
     
@@ -189,11 +195,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/01/08/vue-resource中的post问题/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/01/12/vue中的列表渲染效率/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          iterr, yield与enumerate的模拟实现
+          vue中列表渲染效率
         
       </div>
     </a>
@@ -229,7 +235,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="vue-resource中post变为option问题" data-title="vue-resource中post变为option问题" data-url="http://yoursite.com/2016/01/08/vue-resource中post变为option问题/"></div>
+	<div class="ds-thread" data-thread-key="vue-resource中post变为option问题" data-title="vue-resource中post变为option" data-url="http://yoursite.com/2016/01/08/vue-resource中post变为option问题/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

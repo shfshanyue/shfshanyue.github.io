@@ -205,65 +205,11 @@
 
 
   
-    <article id="post-vue-resource中的post问题" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/01/08/vue-resource中的post问题/" class="article-date">
-  	<time datetime="2016-01-08T14:01:07.000Z" itemprop="datePublished">2016-01-08</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/08/vue-resource中的post问题/">iterr, yield与enumerate的模拟实现</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
     <article id="post-vue-resource中post变为option问题" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/01/08/vue-resource中post变为option问题/" class="article-date">
-  	<time datetime="2016-01-08T07:58:44.000Z" itemprop="datePublished">2016-01-08</time>
+  	<time datetime="2016-01-08T10:58:44.000Z" itemprop="datePublished">2016-01-08</time>
 </a>
     </div>
   
@@ -276,7 +222,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/08/vue-resource中post变为option问题/">vue-resource中post变为option问题</a>
+      <a class="article-title" href="/2016/01/08/vue-resource中post变为option问题/">vue-resource中post变为option</a>
     </h1>
   
 
@@ -285,7 +231,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>在开始使用<code>vue-source</code>时，<code>post</code>请求总会变成<code>options</code>请求。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    ...</span><br><span class="line">    ready: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (localStorage.getItem(<span class="string">'posts'</span>)) &#123;</span><br><span class="line">            <span class="keyword">this</span>.$set(<span class="string">'posts'</span>, <span class="built_in">JSON</span>.parse(localStorage.getItem(<span class="string">'posts'</span>)));</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.$http.post(<span class="string">'http://localhost:3000/api'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">this</span>.$set(<span class="string">'posts'</span>, data.results);</span><br><span class="line">                localStorage.setItem(<span class="string">'posts'</span>, <span class="built_in">JSON</span>.stringify(data.results));</span><br><span class="line">            &#125;).error(<span class="function"><span class="keyword">function</span>(<span class="params">data, status, request</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    ...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="u53C2_u8003_u94FE_u63A5"><a href="#u53C2_u8003_u94FE_u63A5" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="http://segmentfault.com/a/1190000003968020" target="_blank" rel="external">Vue.js快速入门</a><br><a href="https://github.com/vuejs/vue-resource" target="_blank" rel="external">vue-resource</a></p>
+
       
     </div>
     
@@ -710,6 +659,65 @@
       
         <p class="article-more-link">
           <a  href="/2015/12/16/本地搭建静态服务器/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-less做个径向菜单" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/15/less做个径向菜单/" class="article-date">
+  	<time datetime="2015-12-15T13:07:49.000Z" itemprop="datePublished">2015-12-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/15/less做个径向菜单/">less做个径向菜单</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在慕课网发现了一个有意思的课程，叫 <a href="http://www.imooc.com/learn/362">数学知识在CSS动画中的应用</a> 。用到的数学知识是如何计算圆上每个点的坐标。统一名称，中间的菜单叫触发菜单，四周发散的菜单叫子菜单。</p>
+<p>慕课网通过jquery计算子菜单的坐标，控制相应的css属性，来实现这一功能。<br>有关计算，又有关css属性，那么css预处理器便是一个不错的选择。</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/less/">less</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/15/less做个径向菜单/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
