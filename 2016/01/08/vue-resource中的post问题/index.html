@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>本地搭建静态服务器 | 山月水风</title>
+  <title>iterr, yield与enumerate的模拟实现 | 山月水风</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="http-server(node)http-server命令可以访问当前文件夹，可以-p设置端口号（默认为8080），-a设置ip地址。这个命令基于node，所以需要事先安装node，然后使用npm全局安装http-server。">
+  <meta name="description" content="年与时驰，意与日去，遂成枯落，多不接世，悲守穷庐，将复何及！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="本地搭建静态服务器">
-<meta property="og:url" content="http://yoursite.com/2015/12/16/本地搭建静态服务器/index.html">
+<meta property="og:title" content="iterr, yield与enumerate的模拟实现">
+<meta property="og:url" content="http://yoursite.com/2016/01/08/vue-resource中的post问题/index.html">
 <meta property="og:site_name" content="山月水风">
-<meta property="og:description" content="http-server(node)http-server命令可以访问当前文件夹，可以-p设置端口号（默认为8080），-a设置ip地址。这个命令基于node，所以需要事先安装node，然后使用npm全局安装http-server。">
-<meta property="og:updated_time" content="2015-12-20T14:23:55.523Z">
+<meta property="og:description" content="年与时驰，意与日去，遂成枯落，多不接世，悲守穷庐，将复何及！">
+<meta property="og:updated_time" content="2016-01-08T07:57:13.754Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="本地搭建静态服务器">
-<meta name="twitter:description" content="http-server(node)http-server命令可以访问当前文件夹，可以-p设置端口号（默认为8080），-a设置ip地址。这个命令基于node，所以需要事先安装node，然后使用npm全局安装http-server。">
+<meta name="twitter:title" content="iterr, yield与enumerate的模拟实现">
+<meta name="twitter:description" content="年与时驰，意与日去，遂成枯落，多不接世，悲守穷庐，将复何及！">
   
     <link rel="alternative" href="/atom.xml" title="山月水风" type="application/atom+xml">
   
@@ -143,11 +143,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-本地搭建静态服务器" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-vue-resource中的post问题" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/12/16/本地搭建静态服务器/" class="article-date">
-  	<time datetime="2015-12-16T15:08:32.000Z" itemprop="datePublished">2015-12-16</time>
+      <a href="/2016/01/08/vue-resource中的post问题/" class="article-date">
+  	<time datetime="2016-01-08T14:01:07.000Z" itemprop="datePublished">2016-01-08</time>
 </a>
     </div>
   
@@ -160,7 +160,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      本地搭建静态服务器
+      iterr, yield与enumerate的模拟实现
     </h1>
   
 
@@ -169,7 +169,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
 	</div>
 
         
@@ -180,16 +180,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="http-server_28node_29"><a href="#http-server_28node_29" class="headerlink" title="http-server(node)"></a>http-server(node)</h2><p><code>http-server</code>命令可以访问当前文件夹，可以<code>-p</code>设置端口号（默认为8080），<code>-a</code>设置ip地址。<br>这个命令基于node，所以需要事先安装node，然后使用npm全局安装http-server。<br><a id="more"></a></p>
-<blockquote>
-<p>$ npm install http-server -g<br>$ http-server<br>Starting up http-server, serving ./<br>Available on:<br>  http:192.168.56.1:8080<br>  http:192.168.0.100:8080<br>  http:127.0.0.1:8080<br>Hit CTRL-C to stop the server<br>[Wed, 16 Dec 2015 15:23:11 GMT] “GET /.cnpm/“ “Mozilla/5.0 (Windows NT 10.0; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0”</p>
-</blockquote>
-<p>另外http-server还可以设置proxy，https，通过robots.txt设置爬虫规则。功能强大</p>
-<h2 id="python3_-m_http-server"><a href="#python3_-m_http-server" class="headerlink" title="python3 -m http.server"></a>python3 -m http.server</h2><p>另一种方法使用python3的http.server，同样也可以指定端口，默认端口是8000。当然，也要事先装python3。</p>
-<blockquote>
-<p>$ python3 -m http.server<br>Serving HTTP on 0.0.0.0 port 8000 …</p>
-</blockquote>
-
+        
       
     </div>
     
@@ -198,18 +189,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/12/20/getattr-与-getattribute-的区别/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/01/12/vue中的列表渲染效率/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          __getattr__ 与 __getattribute__ 的区别
+          vue中列表渲染效率
         
       </div>
     </a>
   
   
-    <a href="/2015/12/15/less做个径向菜单/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">less做个径向菜单</div>
+    <a href="/2016/01/08/vue-resource中post变为option问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue-resource中post变为option问题</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -238,7 +229,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="本地搭建静态服务器" data-title="本地搭建静态服务器" data-url="http://yoursite.com/2015/12/16/本地搭建静态服务器/"></div>
+	<div class="ds-thread" data-thread-key="vue-resource中的post问题" data-title="iterr, yield与enumerate的模拟实现" data-url="http://yoursite.com/2016/01/08/vue-resource中的post问题/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
