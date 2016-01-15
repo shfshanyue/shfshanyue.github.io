@@ -3,27 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>一道正则表达式的问题 | 山月水风</title>
+  <title>vim中括号自动补全 | 山月水风</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个字符串由+，-，数字组成。如果每个数字都被+号所包围，返回true，否则，返回false。
-
-对于所有的字母，前后均为+符号。 ==&amp;gt; 存在一个字母，前后不全为+符号（取反）。
-构建正则表达式为(?&amp;lt;!\+)\d|\d(?!\+)。">
+  <meta name="description" content="先介绍一个命令inoremap，按键映射命令，i指在insert mode下生效，nore指不会递归映射。()等自动补全的原理就是当按下(的时候自动映射为()。
+1inoremap ( ()&amp;lt;ESC&amp;gt;i
+同理，也可以写成
+1inoremap ( ()&amp;lt;left&amp;gt;
+把括号，引号都补全。最后全部放在配置文件~/.vimrc中。
+123456inoremap ( ()&amp;lt;ES">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一道正则表达式的问题">
-<meta property="og:url" content="http://yoursite.com/2015/12/21/一道正则表达式/index.html">
+<meta property="og:title" content="vim中括号自动补全">
+<meta property="og:url" content="http://yoursite.com/2016/01/15/vim的自动补全/index.html">
 <meta property="og:site_name" content="山月水风">
-<meta property="og:description" content="一个字符串由+，-，数字组成。如果每个数字都被+号所包围，返回true，否则，返回false。
-
-对于所有的字母，前后均为+符号。 ==&amp;gt; 存在一个字母，前后不全为+符号（取反）。
-构建正则表达式为(?&amp;lt;!\+)\d|\d(?!\+)。">
-<meta property="og:updated_time" content="2015-12-25T10:01:17.749Z">
+<meta property="og:description" content="先介绍一个命令inoremap，按键映射命令，i指在insert mode下生效，nore指不会递归映射。()等自动补全的原理就是当按下(的时候自动映射为()。
+1inoremap ( ()&amp;lt;ESC&amp;gt;i
+同理，也可以写成
+1inoremap ( ()&amp;lt;left&amp;gt;
+把括号，引号都补全。最后全部放在配置文件~/.vimrc中。
+123456inoremap ( ()&amp;lt;ES">
+<meta property="og:updated_time" content="2016-01-15T04:33:58.419Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一道正则表达式的问题">
-<meta name="twitter:description" content="一个字符串由+，-，数字组成。如果每个数字都被+号所包围，返回true，否则，返回false。
-
-对于所有的字母，前后均为+符号。 ==&amp;gt; 存在一个字母，前后不全为+符号（取反）。
-构建正则表达式为(?&amp;lt;!\+)\d|\d(?!\+)。">
+<meta name="twitter:title" content="vim中括号自动补全">
+<meta name="twitter:description" content="先介绍一个命令inoremap，按键映射命令，i指在insert mode下生效，nore指不会递归映射。()等自动补全的原理就是当按下(的时候自动映射为()。
+1inoremap ( ()&amp;lt;ESC&amp;gt;i
+同理，也可以写成
+1inoremap ( ()&amp;lt;left&amp;gt;
+把括号，引号都补全。最后全部放在配置文件~/.vimrc中。
+123456inoremap ( ()&amp;lt;ES">
   
     <link rel="alternative" href="/atom.xml" title="山月水风" type="application/atom+xml">
   
@@ -152,11 +158,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-一道正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-vim的自动补全" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/12/21/一道正则表达式/" class="article-date">
-  	<time datetime="2015-12-21T14:53:12.000Z" itemprop="datePublished">2015-12-21</time>
+      <a href="/2016/01/15/vim的自动补全/" class="article-date">
+  	<time datetime="2016-01-15T12:13:12.000Z" itemprop="datePublished">2016-01-15</time>
 </a>
     </div>
   
@@ -169,7 +175,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      一道正则表达式的问题
+      vim中括号自动补全
     </h1>
   
 
@@ -178,7 +184,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
 	</div>
 
         
@@ -189,16 +195,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>一个字符串由+，-，数字组成。如果每个数字都被+号所包围，返回true，否则，返回false。</p>
-</blockquote>
-<p>对于所有的字母，前后均为+符号。 ==&gt; 存在一个字母，前后不全为+符号（取反）。</p>
-<p>构建正则表达式为<code>(?&lt;!\+)\d|\d(?!\+)</code>。<br><a id="more"></a></p>
-<p>用python语言写</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">testStr</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">not</span> re.search(<span class="string">r'(?&lt;!\+)\d|\d(?!\+)'</span>, s)</span><br></pre></td></tr></table></figure>
-<p>用javascript写，等等，js没有负向匹配（匹配前面的字符）。<br>那么换一个思路，匹配<code>\+\d(?=\+)</code>的个数与数字的个数相同。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">testStr</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> match1 = s.match(<span class="regexp">/\+\d(?=\+)/g</span>);</span><br><span class="line">    <span class="keyword">var</span> match2 = s.match(<span class="regexp">/\d/g</span>);</span><br><span class="line">    <span class="keyword">return</span> (match1 ? match1.length: <span class="number">0</span>) === (match2 ? match2.length: <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        <p>先介绍一个命令<code>inoremap</code>，按键映射命令，<code>i</code>指在<code>insert mode</code>下生效，<code>nore</code>指不会递归映射。<br><code>()</code>等自动补全的原理就是当按下<code>(</code>的时候自动映射为<code>()</code>。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inoremap ( ()<span class="tag">&lt;<span class="title">ESC</span>&gt;</span>i</span><br></pre></td></tr></table></figure>
+<p>同理，也可以写成</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">inoremap</span> ( ()&lt;<span class="keyword">left</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>把括号，引号都补全。最后全部放在配置文件<code>~/.vimrc</code>中。</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">inoremap ( ()<span class="tag">&lt;<span class="title">ESC</span>&gt;</span>i</span><br><span class="line">inoremap [ []<span class="tag">&lt;<span class="title">ESC</span>&gt;</span>i</span><br><span class="line">inoremap &#123; &#123;&#125;<span class="tag">&lt;<span class="title">ESC</span>&gt;</span>i</span><br><span class="line">inoremap <span class="tag">&lt; &lt;&gt;</span><span class="tag">&lt;<span class="title">ESC</span>&gt;</span>i</span><br><span class="line">inoremap ' ''<span class="tag">&lt;<span class="title">ESC</span>&gt;</span>i</span><br><span class="line">inoremap " ""<span class="tag">&lt;<span class="title">ESC</span>&gt;</span>i</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -207,18 +209,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/12/25/一个字符串是否能够转化为对称字符串/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          一个字符串是否能够转化为对称字符串
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/12/20/getattr-与-getattribute-的区别/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">__getattr__ 与 __getattribute__ 的区别</div>
+    <a href="/2016/01/12/vue中的列表渲染效率/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue中列表渲染效率</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -247,7 +240,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="一道正则表达式" data-title="一道正则表达式的问题" data-url="http://yoursite.com/2015/12/21/一道正则表达式/"></div>
+	<div class="ds-thread" data-thread-key="vim的自动补全" data-title="vim中括号自动补全" data-url="http://yoursite.com/2016/01/15/vim的自动补全/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

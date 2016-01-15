@@ -92,7 +92,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/algorithm/" style="font-size: 13.33px;">algorithm</a> <a href="/tags/css/" style="font-size: 13.33px;">css</a> <a href="/tags/css3/" style="font-size: 10px;">css3</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/javascript/" style="font-size: 16.67px;">javascript</a> <a href="/tags/less/" style="font-size: 10px;">less</a> <a href="/tags/node/" style="font-size: 13.33px;">node</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/python3/" style="font-size: 10px;">python3</a> <a href="/tags/vue/" style="font-size: 13.33px;">vue</a>
+						<a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/algorithm/" style="font-size: 13.33px;">algorithm</a> <a href="/tags/css/" style="font-size: 13.33px;">css</a> <a href="/tags/css3/" style="font-size: 10px;">css3</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/javascript/" style="font-size: 16.67px;">javascript</a> <a href="/tags/less/" style="font-size: 10px;">less</a> <a href="/tags/node/" style="font-size: 13.33px;">node</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/python3/" style="font-size: 10px;">python3</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/vue/" style="font-size: 13.33px;">vue</a>
 					</div>
 				</section>
 				
@@ -143,6 +143,65 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-vim的自动补全" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/15/vim的自动补全/" class="article-date">
+  	<time datetime="2016-01-15T12:13:12.000Z" itemprop="datePublished">2016-01-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/15/vim的自动补全/">vim中括号自动补全</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>先介绍一个命令<code>inoremap</code>，按键映射命令，<code>i</code>指在<code>insert mode</code>下生效，<code>nore</code>指不会递归映射。<br><code>()</code>等自动补全的原理就是当按下<code>(</code>的时候自动映射为<code>()</code>。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inoremap ( ()<span class="tag">&lt;<span class="title">ESC</span>&gt;</span>i</span><br></pre></td></tr></table></figure>
+<p>同理，也可以写成</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">inoremap</span> ( ()&lt;<span class="keyword">left</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>把括号，引号都补全。最后全部放在配置文件<code>~/.vimrc</code>中。</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">inoremap ( ()<span class="tag">&lt;<span class="title">ESC</span>&gt;</span>i</span><br><span class="line">inoremap [ []<span class="tag">&lt;<span class="title">ESC</span>&gt;</span>i</span><br><span class="line">inoremap &#123; &#123;&#125;<span class="tag">&lt;<span class="title">ESC</span>&gt;</span>i</span><br><span class="line">inoremap <span class="tag">&lt; &lt;&gt;</span><span class="tag">&lt;<span class="title">ESC</span>&gt;</span>i</span><br><span class="line">inoremap ' ''<span class="tag">&lt;<span class="title">ESC</span>&gt;</span>i</span><br><span class="line">inoremap " ""<span class="tag">&lt;<span class="title">ESC</span>&gt;</span>i</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-vue中的列表渲染效率" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -290,7 +349,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>在开始使用<code>vue-source</code>时，<code>post</code>请求总会变成<code>options</code>请求。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    ...</span><br><span class="line">    ready: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (localStorage.getItem(<span class="string">'posts'</span>)) &#123;</span><br><span class="line">            <span class="keyword">this</span>.$set(<span class="string">'posts'</span>, <span class="built_in">JSON</span>.parse(localStorage.getItem(<span class="string">'posts'</span>)));</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.$http.post(<span class="string">'http://localhost:3000/api'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">this</span>.$set(<span class="string">'posts'</span>, data.results);</span><br><span class="line">                localStorage.setItem(<span class="string">'posts'</span>, <span class="built_in">JSON</span>.stringify(data.results));</span><br><span class="line">            &#125;).error(<span class="function"><span class="keyword">function</span>(<span class="params">data, status, request</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    ...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    ready: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (localStorage.getItem(<span class="string">'posts'</span>)) &#123;</span><br><span class="line">            <span class="keyword">this</span>.$set(<span class="string">'posts'</span>, <span class="built_in">JSON</span>.parse(localStorage.getItem(<span class="string">'posts'</span>)));</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.$http.post(<span class="string">'http://localhost:3000/api'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">this</span>.$set(<span class="string">'posts'</span>, data.results);</span><br><span class="line">                localStorage.setItem(<span class="string">'posts'</span>, <span class="built_in">JSON</span>.stringify(data.results));</span><br><span class="line">            &#125;).error(<span class="function"><span class="keyword">function</span>(<span class="params">data, status, request</span>) </span>&#123;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>设置http的请求头<code>Content-Type</code>为<code>application/x-www-form-urlencoded</code>，可以解决问题。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">http</span>: <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">headers</span>:<span class="value"> &#123;<span class="string">'Content-Type'</span>: <span class="string">'application/x-www-form-urlencoded'</span></span></span></span>&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="u53C2_u8003_u94FE_u63A5"><a href="#u53C2_u8003_u94FE_u63A5" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="http://segmentfault.com/a/1190000003968020" target="_blank" rel="external">Vue.js快速入门</a><br><a href="https://github.com/vuejs/vue-resource" target="_blank" rel="external">vue-resource</a></p>
 
       
@@ -659,64 +720,6 @@
       
         <p class="article-more-link">
           <a  href="/2015/12/20/getattr-与-getattribute-的区别/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-本地搭建静态服务器" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/16/本地搭建静态服务器/" class="article-date">
-  	<time datetime="2015-12-16T15:08:32.000Z" itemprop="datePublished">2015-12-16</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/16/本地搭建静态服务器/">本地搭建静态服务器</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="http-server_28node_29"><a href="#http-server_28node_29" class="headerlink" title="http-server(node)"></a>http-server(node)</h2><p><code>http-server</code>命令可以访问当前文件夹，可以<code>-p</code>设置端口号（默认为8080），<code>-a</code>设置ip地址。<br>这个命令基于node，所以需要事先安装node，然后使用npm全局安装http-server。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/12/16/本地搭建静态服务器/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
