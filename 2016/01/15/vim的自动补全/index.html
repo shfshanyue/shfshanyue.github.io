@@ -5,31 +5,16 @@
   
   <title>vim中括号自动补全 | 山月水风</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="先介绍一个命令inoremap，按键映射命令，i指在insert mode下生效，nore指不会递归映射。()等自动补全的原理就是当按下(的时候自动映射为()。
-1inoremap ( ()&amp;lt;ESC&amp;gt;i
-同理，也可以写成
-1inoremap ( ()&amp;lt;left&amp;gt;
-把括号，引号都补全。最后全部放在配置文件~/.vimrc中。
-123456inoremap ( ()&amp;lt;ES">
+  <meta name="description" content="先介绍一个命令inoremap，按键映射命令，i指在insert mode下生效，nore指不会递归映射。()等自动补全的原理就是当按下(的时候自动映射为()。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vim中括号自动补全">
 <meta property="og:url" content="http://yoursite.com/2016/01/15/vim的自动补全/index.html">
 <meta property="og:site_name" content="山月水风">
-<meta property="og:description" content="先介绍一个命令inoremap，按键映射命令，i指在insert mode下生效，nore指不会递归映射。()等自动补全的原理就是当按下(的时候自动映射为()。
-1inoremap ( ()&amp;lt;ESC&amp;gt;i
-同理，也可以写成
-1inoremap ( ()&amp;lt;left&amp;gt;
-把括号，引号都补全。最后全部放在配置文件~/.vimrc中。
-123456inoremap ( ()&amp;lt;ES">
-<meta property="og:updated_time" content="2016-01-15T04:33:58.419Z">
+<meta property="og:description" content="先介绍一个命令inoremap，按键映射命令，i指在insert mode下生效，nore指不会递归映射。()等自动补全的原理就是当按下(的时候自动映射为()。">
+<meta property="og:updated_time" content="2016-03-04T06:36:38.612Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vim中括号自动补全">
-<meta name="twitter:description" content="先介绍一个命令inoremap，按键映射命令，i指在insert mode下生效，nore指不会递归映射。()等自动补全的原理就是当按下(的时候自动映射为()。
-1inoremap ( ()&amp;lt;ESC&amp;gt;i
-同理，也可以写成
-1inoremap ( ()&amp;lt;left&amp;gt;
-把括号，引号都补全。最后全部放在配置文件~/.vimrc中。
-123456inoremap ( ()&amp;lt;ES">
+<meta name="twitter:description" content="先介绍一个命令inoremap，按键映射命令，i指在insert mode下生效，nore指不会递归映射。()等自动补全的原理就是当按下(的时候自动映射为()。">
   
     <link rel="alternative" href="/atom.xml" title="山月水风" type="application/atom+xml">
   
@@ -108,7 +93,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/algorithm/" style="font-size: 13.33px;">algorithm</a> <a href="/tags/css/" style="font-size: 13.33px;">css</a> <a href="/tags/css3/" style="font-size: 10px;">css3</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/javascript/" style="font-size: 16.67px;">javascript</a> <a href="/tags/less/" style="font-size: 10px;">less</a> <a href="/tags/node/" style="font-size: 13.33px;">node</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/python3/" style="font-size: 10px;">python3</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/vue/" style="font-size: 13.33px;">vue</a>
+						<a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/algorithm/" style="font-size: 13.33px;">algorithm</a> <a href="/tags/css/" style="font-size: 13.33px;">css</a> <a href="/tags/css3/" style="font-size: 10px;">css3</a> <a href="/tags/javascript/" style="font-size: 16.67px;">javascript</a> <a href="/tags/less/" style="font-size: 10px;">less</a> <a href="/tags/node/" style="font-size: 13.33px;">node</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/python3/" style="font-size: 10px;">python3</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/vue/" style="font-size: 13.33px;">vue</a>
 					</div>
 				</section>
 				
@@ -196,6 +181,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>先介绍一个命令<code>inoremap</code>，按键映射命令，<code>i</code>指在<code>insert mode</code>下生效，<code>nore</code>指不会递归映射。<br><code>()</code>等自动补全的原理就是当按下<code>(</code>的时候自动映射为<code>()</code>。</p>
+<a id="more"></a>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inoremap ( ()<span class="tag">&lt;<span class="title">ESC</span>&gt;</span>i</span><br></pre></td></tr></table></figure>
 <p>同理，也可以写成</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">inoremap</span> ( ()&lt;<span class="keyword">left</span>&gt;</span><br></pre></td></tr></table></figure>
